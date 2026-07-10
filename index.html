@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Trucking | Premium Australian Transport Services</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0066cc',      // Primary Alpha Blue
+                            darkBlue: '#0052a3',
+                            lightBlue: '#e6f0fa',
+                            navy: '#0f172a',      // Dark text/backgrounds
+                            green: '#8bc34a',     // Pill gradient start
+                            greenDark: '#689f38', // Pill gradient end
+                            gray: '#f8fafc',
+                        }
+                    },
+                    backgroundImage: {
+                        'pill-gradient': 'linear-gradient(to right, #a3d95b, #8bc34a)',
+                        'hero-img': "url('3.jpg')",
+                        'cta-bg': "url('https://images.unsplash.com/photo-1519003300449-424ad0405076?q=80&w=2076&auto=format&fit=crop')"
+                    },
+                    animation: {
+                        'marquee': 'marquee 30s linear infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #0066cc, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0066cc; 
+        }
+        
+        /* Hide details marker */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+<style id="custom-dark-mode">
+.dark body {
+    background:#0b1120;
+    color:#e2e8f0;
+}
+
+.dark nav,
+.dark #mobileMenu,
+.dark section,
+.dark footer {
+    background-color:#0f172a !important;
+}
+
+.dark .glass-panel {
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color:#fff !important;
+}
+
+.dark p,
+.dark span,
+.dark a,
+.dark li {
+    color:#cbd5e1;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+    background:rgba(30,41,59,.9);
+    color:#fff;
+    border-color:rgba(255,255,255,.08);
+}
+
+.dark .bg-white {
+    background:#111827 !important;
+}
+
+.dark .bg-gray-50 {
+    background:#0f172a !important;
+}
+</style>
+
+
+<style id="premium-dark-upgrade">
+
+html {
+    transition: background .4s ease,color .4s ease;
+}
+
+body, section, nav, footer, button, a, div {
+    transition: all .35s ease;
+}
+
+/* Premium dark background */
+
+.dark body{
+    background:
+    radial-gradient(circle at top left,#1e3a8a 0%,transparent 35%),
+    radial-gradient(circle at top right,#0ea5e9 0%,transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a,#111827);
+}
+
+/* Glass buttons */
+
+.dark button,
+.dark .bg-brand-blue,
+.dark a[class*="bg-"],
+.dark .rounded-lg,
+.dark .rounded-xl {
+    background: rgba(255,255,255,.08) !important;
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.08);
+}
+
+/* Neon hover */
+
+.dark button:hover,
+.dark a[class*="bg-"]:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 18px rgba(59,130,246,.45),
+        0 0 40px rgba(14,165,233,.18);
+}
+
+/* Cards */
+
+.dark .shadow-xl,
+.dark .shadow-2xl,
+.dark .bg-white {
+    background: rgba(15,23,42,.68) !important;
+    backdrop-filter: blur(26px);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+/* Headings glow */
+
+.dark h1,
+.dark h2 {
+    text-shadow: 0 0 28px rgba(96,165,250,.18);
+}
+
+/* Navbar */
+
+.dark #navbar {
+    background: rgba(2,6,23,.72) !important;
+    backdrop-filter: blur(26px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Floating CTA */
+
+.dark .fixed.bottom-5 > div {
+    background: rgba(2,6,23,.72) !important;
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 12px 40px rgba(0,0,0,.45);
+}
+
+</style>
+
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 antialiased overflow-x-hidden">
+
+    <div class="hidden lg:block bg-brand-navy text-white text-xs py-2 px-4 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4 text-gray-300">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3 text-brand-green"></i> 24/7 Dispatch Available</span>
+                <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3 text-brand-green"></i> Serving All Australian States</span>
+            </div>
+            <div class="flex items-center gap-4">
+            </div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-[90px]">
+                
+                <div class="relative flex items-center justify-between w-full">
+
+    <!-- Left: Logo -->
+<div class="flex items-center gap-3">
+
+    <!-- Replace the path with your PNG logo -->
+    <img
+        src="/logo.png"
+        alt="Company Logo"
+        class="h-14 w-auto object-contain"
+    />
+
+    
+
+</div>
+
+    <!-- Center: Navigation -->
+    <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="#" class="text-[16px] font-medium text-[#737b86] hover:text-[#0066cc] transition-colors">
+            Services
+        </a>
+        <a href="#" class="text-[16px] font-medium text-[#737b86] hover:text-[#0066cc] transition-colors">
+            Insurance
+        </a>
+        <a href="#" class="text-[16px] font-medium text-[#737b86] hover:text-[#0066cc] transition-colors">
+            About Us
+        </a>
+        <a href="#" class="text-[16px] font-medium text-[#737b86] hover:text-[#0066cc] transition-colors">
+            Blog
+        </a>
+        <a href="#" class="text-[16px] font-medium text-[#737b86] hover:text-[#0066cc] transition-colors">
+            Gallery
+        </a>
+        <a href="#" class="text-[16px] font-medium text-[#737b86] hover:text-[#0066cc] transition-colors">
+            Contact Us
+        </a>
+    </div>
+
+    <!-- Right: Contact Pill -->
+    <a href="tel:1300025742"
+        class="hidden xl:flex group items-center bg-gradient-to-r from-[#b3d344] to-[#8cc63f] rounded-full p-1.5 shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+
+        <div class="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center relative z-10 p-[4px]">
+            <div class="w-full h-full bg-[#92c83e] rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                    stroke-width="2.5" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+
+        <div
+            class="bg-white rounded-r-full rounded-l-none h-[42px] flex flex-col justify-center pr-6 pl-5 -ml-4 border-y border-r border-white group-hover:border-gray-50 transition-colors">
+            <span class="text-[12px] font-medium text-gray-500 leading-none mb-1">
+                Contact support
+            </span>
+            <span class="text-[18px] font-extrabold text-[#75b026] leading-none tracking-tight">
+                1300 025 742
+            </span>
+        </div>
+
+    </a>
+
+</div>
+
+                
+<button id="themeToggle"
+class="hidden lg:flex glass-panel w-12 h-12 rounded-full items-center justify-center transition-all duration-300 hover:scale-105 mr-4">
+    <i data-lucide="moon" id="themeIcon" class="w-5 h-5"></i>
+</button>
+
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden ml-4">
+                    <button id="menuBtn" class="text-gray-800 hover:text-brand-blue focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="mobileMenu" class="hidden lg:hidden bg-white border-b shadow-md">
+    <div class="px-6 py-5 flex flex-col gap-4">
+        <a href="#">Services</a>
+        <a href="#">Insurance</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact Us</a>
+        <a href="tel:1300025742"
+           class="bg-[#0066cc] text-white text-center py-3 rounded-lg font-semibold">
+           Call 1300 025 742
+        </a>
+    </div>
+</div>
+
+
+    <section class="relative min-h-screen lg:min-h-[90vh] flex items-center justify-center overflow-hidden parallax-bg hero-img bg-hero-img pt-20 pb-32">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-transparent"></div>
+        
+        <!-- Animated Blobs for depth -->
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-brand-blue rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-brand-green rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+            
+            <!-- Hero Text -->
+            <div class="w-full lg:w-3/5 text-center lg:text-left text-white" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark mb-6 border border-white/20">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse"></span>
+                    <span class="text-sm font-medium tracking-wide uppercase">Australia's Premier Transport Network</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-tight mb-6 leading-[1.1]">
+                    We connect Australia <br/>
+                    on the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 inline-block relative">wheels!</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    The fastest growing leader in Australia's shipping industry. Specialized in Heavy Haulage, General Freight, and Dangerous Goods transport across all states.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button class="bg-brand-blue hover:bg-brand-darkBlue text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-[0_0_20px_rgba(0,102,204,0.4)] hover:shadow-[0_0_30px_rgba(0,102,204,0.6)] transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                        Request a Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                    <button class="glass-panel text-white hover:bg-white/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center gap-3">
+                        View Fleet <i data-lucide="truck" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Interactive Card -->
+            <div class="w-full lg:w-2/5" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div id="hero-card" class="glass-panel rounded-2xl p-8 shadow-2xl border border-white/30 transform transition-transform duration-300 ease-out preserve-3d">
+                    <h3 class="font-heading font-bold text-2xl text-brand-navy mb-6">Quick Freight Estimate</h3>
+                    
+                    <form class="space-y-4">
+                        <div class="relative">
+                            <i data-lucide="map-pin" class="absolute left-3 top-3.5 w-5 h-5 text-gray-400"></i>
+                            <input type="text" placeholder="Pickup Suburb or Postcode" class="w-full pl-10 pr-4 py-3 bg-white/80 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                        </div>
+                        <div class="relative">
+                            <i data-lucide="map-pin" class="absolute left-3 top-3.5 w-5 h-5 text-brand-blue"></i>
+                            <input type="text" placeholder="Delivery Suburb or Postcode" class="w-full pl-10 pr-4 py-3 bg-white/80 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                        </div>
+                        <div class="relative">
+                            <i data-lucide="package" class="absolute left-3 top-3.5 w-5 h-5 text-gray-400"></i>
+                            <select class="w-full pl-10 pr-4 py-3 bg-white/80 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-blue outline-none transition-all appearance-none text-gray-600">
+                                <option value="">Select Freight Type</option>
+                                <option value="general">General Freight</option>
+                                <option value="heavy">Heavy Haulage</option>
+                                <option value="dangerous">Dangerous Goods</option>
+                                <option value="container">Container Transport</option>
+                            </select>
+                        </div>
+                        <button type="button" class="w-full bg-brand-navy hover:bg-gray-800 text-white font-bold py-4 rounded-lg transition-colors shadow-md mt-2">
+                            Calculate Now
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-200/50 flex items-center justify-center gap-6">
+                        <div class="text-center">
+                            <p class="text-brand-blue font-bold text-xl">100%</p>
+                            <p class="text-xs text-gray-600 font-medium uppercase">Insured</p>
+                        </div>
+                        <div class="w-px h-8 bg-gray-300"></div>
+                        <div class="text-center">
+                            <p class="text-brand-blue font-bold text-xl">24/7</p>
+                            <p class="text-xs text-gray-600 font-medium uppercase">Tracking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white py-6 border-b border-gray-100 overflow-hidden relative z-20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 flex items-center">
+            <span class="text-sm font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap mr-8">Trusted By</span>
+            <div class="relative w-full overflow-hidden">
+                <div class="flex space-x-12 animate-marquee items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+                    <!-- Repeated logos for infinite effect -->
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">BHP</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">RioTinto</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">Woolworths</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">Coles</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">Bunnings</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">Wesfarmers</h4>
+                    <!-- Duplicate -->
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">BHP</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">RioTinto</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">Woolworths</h4>
+                    <h4 class="text-xl font-heading font-black text-gray-800 whitespace-nowrap">Coles</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+        <!-- Decorative bg pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#0066cc 2px, transparent 2px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left: Text & Features -->
+                <div data-aos="fade-right">
+                    <span class="text-brand-blue font-bold tracking-wider text-sm uppercase">About Alpha Trucking</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-navy mt-3 mb-6 leading-tight">
+                        Where Reliability Meets <span class="text-brand-blue">Strategic</span> Advantage
+                    </h2>
+                    
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        The Alpha Trucking Company is the fastest growing leader in Australia's shipping industry and is looking forward to becoming a global giant. We pride ourselves on delivering comprehensive transport solutions that empower your supply chain.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Feature 1 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-brand-blue">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl text-brand-navy mb-1">Nationwide Coverage</h4>
+                                <p class="text-gray-500 text-sm">Extensive network covering New South Wales, South Australia, Victoria, and Queensland.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 text-brand-greenDark">
+                                <i data-lucide="truck" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl text-brand-navy mb-1">Modern Fleet</h4>
+                                <p class="text-gray-500 text-sm">Equipped with the latest prime movers, trailing equipment, and safety technology.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 text-orange-600">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl text-brand-navy mb-1">On-Time Delivery</h4>
+                                <p class="text-gray-500 text-sm">Advanced logistics planning ensures your freight arrives exactly when promised.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Image composition & Stats -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="/img2.png" alt="Alpha Trucks on Highway" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Floating Stat 1 -->
+                    <div class="hidden lg:block absolute -bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 w-48 text-center animate-[bounce_3s_infinite_ease-in-out]">
+                        <p class="text-4xl font-heading font-black text-brand-blue mb-1">15+</p>
+                        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Years Experience</p>
+                    </div>
+
+                    <!-- Floating Stat 2 -->
+                    <div class="hidden lg:block absolute -top-10 -right-10 bg-brand-navy p-6 rounded-2xl shadow-xl border border-gray-700 w-48 text-center animate-[bounce_4s_infinite_ease-in-out]">
+                        <p class="text-4xl font-heading font-black text-brand-green mb-1">10k+</p>
+                        <p class="text-sm font-semibold text-gray-300 uppercase tracking-wide">Deliveries Yearly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-blue font-bold tracking-wider text-sm uppercase">Our Expertise</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-navy mt-3 mb-4">Comprehensive <span class="text-brand-blue">Trucking</span> Services</h2>
+                <p class="text-gray-600 text-lg">From standard pallets to massive infrastructure components, we have the specialized equipment and expertise to move it safely.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:bg-brand-blue transition-colors duration-500"></div>
+                    <i data-lucide="box" class="w-12 h-12 text-brand-blue group-hover:text-white transition-colors duration-500 mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-3">General Freight Services</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Reliable transport for palletized and un-palletized general cargo across local and interstate routes. Fast, efficient, and fully trackable.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold group-hover:text-brand-darkBlue">Read details <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:bg-brand-blue transition-colors duration-500"></div>
+                    <i data-lucide="map" class="w-12 h-12 text-brand-blue group-hover:text-white transition-colors duration-500 mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-3">Interstate Delivery</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Seamless cross-border transport connecting NSW, SA, VIC, and QLD. We handle the long-haul logistics so you can focus on business.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold group-hover:text-brand-darkBlue">Read details <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:bg-brand-blue transition-colors duration-500"></div>
+                    <i data-lucide="truck" class="w-12 h-12 text-brand-blue group-hover:text-white transition-colors duration-500 mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-3">Intrastate Delivery</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Dedicated regional and metropolitan transport solutions within your state. Perfect for daily distribution requirements.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold group-hover:text-brand-darkBlue">Read details <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:bg-brand-blue transition-colors duration-500"></div>
+                    <i data-lucide="weight" class="w-12 h-12 text-brand-blue group-hover:text-white transition-colors duration-500 mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-3">Heavy Haulage</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Specialized floats and prime movers capable of transporting oversized machinery, construction materials, and mining equipment.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold group-hover:text-brand-darkBlue">Read details <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-10 group-hover:bg-red-500 transition-colors duration-500"></div>
+                    <i data-lucide="flame" class="w-12 h-12 text-red-500 group-hover:text-white transition-colors duration-500 mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-3">Dangerous Goods</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Fully certified and compliant transport of hazardous materials. Our drivers undergo rigorous safety and handling training.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-red-500 font-semibold group-hover:text-red-700">Read details <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:bg-brand-blue transition-colors duration-500"></div>
+                    <i data-lucide="container" class="w-12 h-12 text-brand-blue group-hover:text-white transition-colors duration-500 mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-3">Container Transport</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Wharf cartage and container unpacking services. Efficient handling of 20ft and 40ft containers directly from port to your facility.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-semibold group-hover:text-brand-darkBlue">Read details <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-navy text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Our Streamlined <span class="text-brand-blue">Process</span></h2>
+                <p class="text-gray-400">From request to delivery, we make transport simple.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-gray-700 -translate-y-1/2 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto bg-brand-navy border-4 border-brand-blue rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(0,102,204,0.5)]">
+                        <i data-lucide="file-text" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">1. Request Quote</h4>
+                    <p class="text-sm text-gray-400">Submit your freight details online or call us.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative z-10" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto bg-brand-navy border-4 border-brand-blue rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="check-circle" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">2. Confirm Booking</h4>
+                    <p class="text-sm text-gray-400">Approve pricing and finalize transport schedule.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative z-10" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-20 h-20 mx-auto bg-brand-navy border-4 border-brand-blue rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">3. Pickup & Transit</h4>
+                    <p class="text-sm text-gray-400">Our drivers secure the load and begin transit.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative z-10" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-20 h-20 mx-auto bg-brand-navy border-4 border-brand-green rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(139,195,74,0.5)]">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-brand-green"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">4. Safe Delivery</h4>
+                    <p class="text-sm text-gray-400">On-time arrival and proof of delivery provided.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <span class="text-brand-blue font-bold tracking-wider text-sm uppercase">Equipment</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-navy mt-2">Navigating The Path To <span class="text-brand-blue">Excellence</span></h2>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#" class="text-brand-blue font-semibold hover:text-brand-darkBlue flex items-center gap-2">View full fleet specs <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <!-- Detailed Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Large Item -->
+                <div class="md:col-span-2 group overflow-hidden rounded-2xl relative h-[260px] sm:h-[320px] lg:h-[400px] shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/3.jpg" alt="Heavy Haulage Float" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                        <span class="text-brand-green font-bold text-sm tracking-widest uppercase mb-2">Heavy Machinery</span>
+                        <h3 class="text-white font-heading font-bold text-3xl mb-2">Low Loader Floats</h3>
+                        <p class="text-gray-300 max-w-md transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">Capable of moving oversized loads up to 100 tonnes. Perfect for mining and construction equipment.</p>
+                    </div>
+                </div>
+                
+                <!-- Normal Items -->
+                <div class="group overflow-hidden rounded-2xl relative h-[260px] sm:h-[320px] lg:h-[400px] shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/1.jpg" alt="B-Double Trailer" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white font-heading font-bold text-xl mb-1">B-Double Trailers</h3>
+                        <p class="text-gray-300 text-sm">High volume interstate general freight.</p>
+                    </div>
+                </div>
+
+                <div class="group overflow-hidden rounded-2xl relative h-[220px] sm:h-[260px] lg:h-[300px] shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/2.jpg" alt="Tautliner" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white font-heading font-bold text-xl mb-1">Tautliners</h3>
+                        <p class="text-gray-300 text-sm">Weather-proof palletized transport.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 group overflow-hidden rounded-2xl relative h-[220px] sm:h-[260px] lg:h-[300px] shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/img2.png" alt="Container Skel" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/30 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white font-heading font-bold text-2xl mb-1">Container Skels</h3>
+                        <p class="text-gray-300 text-sm max-w-md">Retractable skeletal trailers optimized for secure 20ft and 40ft shipping container transport direct from wharf to warehouse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-navy">What Our <span class="text-brand-blue">Clients Say</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm relative mt-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center shadow-lg">
+                        <i data-lucide="quote" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4 pt-2 text-yellow-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Alpha Trucking has completely transformed our supply chain reliability. Their dangerous goods transport is impeccable and fully compliant. Highly recommended."</p>
+                    <div>
+                        <h4 class="font-bold text-brand-navy">Sarah Jenkins</h4>
+                        <p class="text-sm text-gray-500">Logistics Manager, ChemCorp</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-navy text-white rounded-2xl p-8 border border-gray-800 shadow-xl relative mt-8 transform md:-translate-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-brand-green rounded-full flex items-center justify-center shadow-lg">
+                        <i data-lucide="quote" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4 pt-2 text-yellow-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Moving 80-tonne excavators interstate is no joke. Alpha's heavy haulage team handled permits, escorts, and transport flawlessly. Best in the business."</p>
+                    <div>
+                        <h4 class="font-bold text-white">David Mitchell</h4>
+                        <p class="text-sm text-gray-400">Operations Director, BuildMax</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm relative mt-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center shadow-lg">
+                        <i data-lucide="quote" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4 pt-2 text-yellow-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"We rely on Alpha for our daily intrastate pallet deliveries. They are always on time, drivers are professional, and tracking is totally transparent."</p>
+                    <div>
+                        <h4 class="font-bold text-brand-navy">Michael Chang</h4>
+                        <p class="text-sm text-gray-500">Warehouse Lead, RetailPro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    
+                    <!-- Form Side -->
+                    <div class="p-10 md:p-16 bg-white" data-aos="fade-right">
+                        <h3 class="text-3xl font-heading font-bold text-brand-navy mb-2">Get a Detailed Quote</h3>
+                        <p class="text-gray-500 mb-8">Fill in your specs, and our operations team will respond within 2 hours.</p>
+                        
+                        <form class="space-y-5">
+                            <div class="grid grid-cols-2 gap-5">
+                                <input type="text" placeholder="First Name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition">
+                                <input type="text" placeholder="Company Name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition">
+                            </div>
+                            <div class="grid grid-cols-2 gap-5">
+                                <input type="email" placeholder="Email Address" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition">
+                                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition">
+                            </div>
+                            <textarea rows="4" placeholder="Describe your freight (weight, dimensions, special requirements)..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition resize-none"></textarea>
+                            <button type="button" class="w-full bg-brand-blue hover:bg-brand-darkBlue text-white font-bold py-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2">
+                                Request Quote <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- FAQ Side -->
+                    <div class="p-10 md:p-16 bg-brand-navy text-white" data-aos="fade-left">
+                        <h3 class="text-3xl font-heading font-bold mb-8">Frequently Asked Questions</h3>
+                        
+                        <div class="space-y-4">
+                            <details class="group bg-white/5 rounded-lg border border-white/10 open:bg-white/10 transition-colors">
+                                <summary class="flex justify-between items-center cursor-pointer p-4 font-semibold">
+                                    Do you transport Dangerous Goods?
+                                    <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-5 h-5 text-brand-green"></i></span>
+                                </summary>
+                                <div class="p-4 pt-0 text-gray-300 text-sm leading-relaxed">
+                                    Yes, we are fully certified and insured to transport various classes of dangerous goods. Our drivers are specially trained, and our equipment meets all regulatory standards.
+                                </div>
+                            </details>
+
+                            <details class="group bg-white/5 rounded-lg border border-white/10 open:bg-white/10 transition-colors">
+                                <summary class="flex justify-between items-center cursor-pointer p-4 font-semibold">
+                                    What areas do you service?
+                                    <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-5 h-5 text-brand-green"></i></span>
+                                </summary>
+                                <div class="p-4 pt-0 text-gray-300 text-sm leading-relaxed">
+                                    We provide services across New South Wales, South Australia, Victoria, and Queensland. We handle both intrastate local deliveries and long-haul interstate routes.
+                                </div>
+                            </details>
+
+                            <details class="group bg-white/5 rounded-lg border border-white/10 open:bg-white/10 transition-colors">
+                                <summary class="flex justify-between items-center cursor-pointer p-4 font-semibold">
+                                    Do you offer heavy machinery transport?
+                                    <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-5 h-5 text-brand-green"></i></span>
+                                </summary>
+                                <div class="p-4 pt-0 text-gray-300 text-sm leading-relaxed">
+                                    Absolutely. Our heavy haulage division operates specialized low loader floats capable of moving oversized and overweight machinery safely and efficiently.
+                                </div>
+                            </details>
+                            
+                            <details class="group bg-white/5 rounded-lg border border-white/10 open:bg-white/10 transition-colors">
+                                <summary class="flex justify-between items-center cursor-pointer p-4 font-semibold">
+                                    Is my freight insured during transit?
+                                    <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-5 h-5 text-brand-green"></i></span>
+                                </summary>
+                                <div class="p-4 pt-0 text-gray-300 text-sm leading-relaxed">
+                                    Yes, we carry comprehensive marine transit insurance. You can also review our dedicated "Insurance" page for full coverage details and policy limits.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0066cc] pt-16 font-sans text-white border-t-4 border-brand-darkBlue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Column 1: Brand & Info -->
+                <div class="lg:pr-8">
+                    <div class="flex items-center gap-2 mb-6">
+                       
+                        <div class="flex flex-col justify-center">
+                            <img src="/logo.png"
+                                    alt="Company Logo"
+                                        class="h-12 w-auto object-contain"
+                                    />
+
+                        </div>
+                    </div>
+                    <p class="text-white/90 text-sm leading-relaxed mb-6">
+                        The Alpha Trucking Company is the fastest growing leader in Australia's shipping industry and is looking forward to becoming a global giant.
+                    </p>
+                    <div class="flex gap-4 font-bold text-sm mb-6">
+                        <span>ABN - 21 662 204 846</span>
+                        <span>ACN - 662 204 846</span>
+                    </div>
+                    <div class="flex space-x-3">
+
+    <a href="#"
+       class="w-10 h-10 rounded-full bg-[#fcd34d] flex items-center justify-center text-[#0066cc] hover:bg-white transition-colors shadow-md">
+
+        <i class="fa-brands fa-facebook-f"></i>
+
+    </a>
+
+    <a href="#"
+       class="w-10 h-10 rounded-full bg-[#fcd34d] flex items-center justify-center text-[#0066cc] hover:bg-white transition-colors shadow-md">
+
+        <i class="fa-brands fa-instagram"></i>
+
+    </a>
+
+    <a href="#"
+       class="w-10 h-10 rounded-full bg-[#fcd34d] flex items-center justify-center text-[#0066cc] hover:bg-white transition-colors shadow-md">
+
+        <i class="fa-brands fa-linkedin-in"></i>
+
+    </a>
+
+    <a href="#"
+       class="w-10 h-10 rounded-full bg-[#fcd34d] flex items-center justify-center text-[#0066cc] hover:bg-white transition-colors shadow-md">
+
+        <i class="fa-brands fa-pinterest-p"></i>
+
+    </a>
+
+</div>
+                </div>
+
+                <!-- Column 2: Links -->
+                <div>
+                    <h4 class="font-bold mb-6 tracking-wide text-lg">LINKS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Home</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> About Us</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Contact Us</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Make A Payment</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Buy Insurance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h4 class="font-bold mb-6 tracking-wide text-lg">SERVICES</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">General Freight<br>Services</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Interstate Delivery<br>Service</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Intrastate Delivery<br>Service</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Heavy Haulage Service</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Dangerous Goods<br>Transportation Service</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Container Transport<br>Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: States -->
+                <div>
+                    <h4 class="font-bold mb-6 tracking-wide text-lg">SERVICES BY STATE</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">New South Wales</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">South Australia</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Victoria</a></li>
+                        <li><a href="#" class="text-white/90 hover:text-white transition-colors block">Queensland</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-10 border-t border-white/20">
+                <!-- Phone -->
+                <div class="bg-white/10 rounded-xl p-6 flex items-center gap-4 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="phone" class="w-6 h-6 text-[#0066cc]"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-widest text-white/80 uppercase">PHONE</p>
+                        <p class="text-xl font-bold">1300 025 742</p>
+                    </div>
+                </div>
+                <!-- Address -->
+                <div class="bg-white/10 rounded-xl p-6 flex items-center gap-4 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-[#0066cc]"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-widest text-white/80 uppercase">ADDRESS</p>
+                        <p class="text-sm font-semibold">Unit 4/19 Harris St, North St<br>Marys NSW 2760, Austral</p>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="bg-white/10 rounded-xl p-6 flex items-center gap-4 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="mail" class="w-6 h-6 text-[#0066cc]"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold tracking-widest text-white/80 uppercase">EMAIL</p>
+                        <p class="text-lg font-bold">info@alphatrucking.com.au</p>
+                        <a href="#" class="text-xs text-white/80 underline hover:text-white">View all contact emails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="bg-white text-gray-700 py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold">
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-[#0066cc]">Terms & Conditions</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="#" class="hover:text-[#0066cc]">Privacy Policy</a>
+                </div>
+                <div>
+                    Copyright &copy; 2026 Alpha Trucking Pty Ltd | ABN: 21 662 204 846
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize Icons
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Initialize AOS Animations
+            AOS.init({
+                once: true,
+                offset: 50,
+                duration: 800,
+                easing: 'ease-out-cubic',
+            });
+        });
+
+        // Interactive 3D Card Hover Effect (Vanilla JS Parallax)
+        const card = document.getElementById('hero-card');
+        const isMobile = window.innerWidth < 1024;
+        if (card && !isMobile) {
+            document.addEventListener('mousemove', (e) => {
+                // Calculate rotation based on mouse position relative to screen center
+                let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+                let yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+                
+                // Add limits to rotation
+                xAxis = Math.max(-10, Math.min(10, xAxis));
+                yAxis = Math.max(-10, Math.min(10, yAxis));
+
+                card.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+
+            // Reset when mouse leaves window
+            document.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+            });
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-white/90', 'bg-white');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-white', 'bg-white/90');
+            }
+        });
+    </script>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+}
+</script>
+
+
+<div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[9999] w-[95%] md:w-auto">
+    <div class="glass-dark px-4 md:px-8 py-4 rounded-2xl shadow-2xl border border-white/10">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+            <div>
+                <h4 class="font-bold text-white text-lg">
+                    Ready to move your freight?
+                </h4>
+                <p class="text-gray-300 text-sm">
+                    Fast Quotes • 24/7 Dispatch • Australia-Wide Transport
+                </p>
+            </div>
+
+            <a href="tel:1300025742"
+               class="bg-brand-blue text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+                Get a Quote
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    if (themeIcon) {
+        themeIcon.setAttribute("data-lucide", "sun");
+    }
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+
+        document.documentElement.classList.toggle("dark");
+
+        const isDark = document.documentElement.classList.contains("dark");
+
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+
+        if (themeIcon) {
+            themeIcon.setAttribute("data-lucide", isDark ? "sun" : "moon");
+        }
+
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+    });
+}
+</script>
+
+</body>
+</html>
